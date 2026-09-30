@@ -1,0 +1,104 @@
+.analysis-suggestion {
+  background: var(--color-surface);
+  border: 1px dashed var(--accent-purple);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+}
+
+.analysis-suggestion__body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.analysis-suggestion--added {
+  border-style: solid;
+  border-color: var(--color-success);
+  background: var(--color-success-bg);
+}
+
+.analysis-suggestion__name {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--accent-purple);
+}
+
+.analysis-suggestion--added .analysis-suggestion__name {
+  color: var(--color-success);
+}
+
+.analysis-suggestion__description {
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.analysis-suggestion__intent-toggle {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: 2px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--accent-purple);
+  cursor: pointer;
+}
+
+.analysis-suggestion__intent-toggle svg {
+  width: 12px;
+  height: 12px;
+}
+
+.analysis-suggestion__intent {
+  margin: 0;
+  font-size: 13px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  color: var(--color-text);
+  background: var(--color-bg);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+}
+
+.analysis-suggestion__modal-description {
+  margin: 0 0 14px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.analysis-suggestion__btn {
+  align-self: flex-start;
+  border-radius: var(--radius-sm);
+  padding: 7px 16px;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--accent-purple);
+  border: 1px solid var(--accent-purple);
+  color: #fff;
+}
+
+.analysis-suggestion__btn:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.analysis-suggestion__btn:disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+
+.analysis-suggestion--added .analysis-suggestion__btn {
+  background: var(--color-success);
+  border-color: var(--color-success);
+}

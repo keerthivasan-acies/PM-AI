@@ -1,0 +1,513 @@
+.features-page {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.features-page__main {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 28px 24px 60px;
+  flex: 1;
+}
+
+.features-page__loading {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+  padding: 10px 0;
+}
+
+.features-page__error {
+  margin: 0 0 16px;
+  font-size: 12.5px;
+  color: var(--color-error);
+  background: var(--color-error-bg);
+  border: 1px solid var(--color-error);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+}
+
+.features-page__hint {
+  margin: 0 0 16px;
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+  background: var(--color-bg-subtle, #f4f6f8);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+}
+
+.features-page__defs-summary {
+  margin: 0 0 20px;
+  font-size: 12.5px;
+  color: var(--carrier-blue);
+  background: var(--carrier-blue-tint);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+}
+
+/* -- card shell ----------------------------------------------------- */
+
+.features-page__card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 18px 20px 20px;
+  margin-bottom: 18px;
+}
+
+.features-page__card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.features-page__card-head-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.features-page__slot-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--carrier-blue);
+}
+
+.features-page__pill {
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--carrier-blue);
+  background: var(--carrier-blue-tint);
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+
+.features-page__filename {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.features-page__status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--color-success);
+  background: var(--color-success-bg);
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+
+/* -- stat tiles ------------------------------------------------------- */
+
+.features-page__stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+/* Keep these stat tiles at their original compact size -- the shared
+   StatTile got bigger (and gained a decorative flourish) for the
+   Analysis/Report pages, but this row has too many tiles for that. */
+.features-page__stat-row .stat-tile {
+  flex: 1 1 140px;
+  align-items: center;
+  gap: 12px;
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+  min-height: 0;
+}
+
+.features-page__stat-row .stat-tile__icon {
+  width: 38px;
+  height: 38px;
+}
+
+.features-page__stat-row .stat-tile__icon svg {
+  width: 19px;
+  height: 19px;
+}
+
+.features-page__stat-row .stat-tile__value {
+  font-size: 19px;
+  line-height: 1.2;
+}
+
+.features-page__stat-row .stat-tile__label {
+  font-size: 10.5px;
+  letter-spacing: 0.02em;
+}
+
+.features-page__stat-row .stat-tile__flourish {
+  display: none;
+}
+
+
+/* -- AI suggestions + custom KPI panels (side by side) ------------------- */
+
+.features-page__panels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-items: start;
+}
+
+.features-page__panel-head-text {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.features-page__panel-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.features-page__panel-icon svg {
+  width: 17px;
+  height: 17px;
+}
+
+.features-page__panel-icon--purple {
+  background: var(--accent-purple);
+  color: #fff;
+}
+
+.features-page__panel-icon--blue {
+  background: var(--carrier-blue);
+  color: #fff;
+}
+
+.features-page__panel-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 14px;
+  width: 100%;
+}
+
+.features-page__panel-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+.features-page__ai-panel {
+  border: 1px solid var(--accent-purple-bg);
+  background: var(--accent-purple-bg);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.features-page__ai-panel-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.features-page__ai-panel-title {
+  margin: 0 0 4px;
+  font-size: 14.5px;
+  font-weight: 800;
+  color: var(--accent-purple);
+}
+
+.features-page__ai-panel-hint {
+  margin: 0;
+  font-size: 12px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.features-page__ai-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* -- add custom KPI ---------------------------------------------------- */
+
+.features-page__custom-kpi {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.features-page__custom-kpi-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.features-page__custom-kpi-title {
+  margin: 0 0 4px;
+  font-size: 14.5px;
+  font-weight: 800;
+  color: var(--carrier-blue);
+}
+
+.features-page__custom-kpi-hint {
+  margin: 0;
+  font-size: 12px;
+  color: var(--color-text-muted);
+  max-width: 480px;
+  line-height: 1.5;
+}
+
+/* -- feature grid + skipped -------------------------------------------- */
+
+.features-page__none {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+}
+
+.features-page__section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--carrier-blue);
+}
+
+.features-page__section-title svg {
+  width: 17px;
+  height: 17px;
+}
+
+.features-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  align-items: stretch;
+  gap: 14px;
+}
+
+.features-page__skipped {
+  margin: 14px 0 0;
+  padding: 10px 14px;
+  background: var(--carrier-blue-tint);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+/* -- summary of all features added ------------------------------------- */
+
+.features-page__summary {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid var(--carrier-blue-tint-2);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+}
+
+.features-page__summary-title {
+  margin: 0 0 14px;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--carrier-blue);
+}
+
+.features-page__summary-group {
+  margin-bottom: 12px;
+}
+
+.features-page__summary-group:last-child {
+  margin-bottom: 0;
+}
+
+.features-page__summary-group-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.features-page__summary-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.features-page__summary-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--color-text);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 4px 10px 4px 12px;
+  cursor: pointer;
+}
+
+.features-page__summary-item:hover {
+  border-color: var(--carrier-blue);
+  background: var(--carrier-blue-tint);
+}
+
+.features-page__summary-name {
+  font-weight: 700;
+  line-height: 1;
+}
+
+.features-page__required-tag {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--carrier-blue);
+  background: var(--carrier-blue-tint);
+  border-radius: 999px;
+  padding: 2px 8px;
+  line-height: 1.2;
+}
+
+.features-page__summary-col {
+  color: var(--color-text-muted);
+  font-size: 11px;
+  font-family: inherit;
+  line-height: 1;
+}
+
+/* -- row actions / preview / footer buttons ----------------------------- */
+
+.features-page__row-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.features-page__link-btn {
+  background: none;
+  border: none;
+  color: var(--carrier-blue);
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.features-page__link-btn:hover {
+  color: var(--carrier-light-blue);
+}
+
+.features-page__download-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--carrier-blue);
+  text-decoration: none;
+  border: 1px solid var(--carrier-blue-tint-2);
+  border-radius: var(--radius-sm);
+  padding: 8px 16px;
+}
+
+.features-page__download-link svg {
+  width: 15px;
+  height: 15px;
+}
+
+.features-page__download-link:hover {
+  border-color: var(--carrier-blue);
+  background: var(--carrier-blue-tint-2);
+}
+
+.features-page__actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.features-page__btn {
+  border-radius: var(--radius-sm);
+  padding: 10px 20px;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.features-page__btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.features-page__btn--primary {
+  background: var(--carrier-blue);
+  border: 1px solid var(--carrier-blue);
+  color: #fff;
+}
+
+.features-page__nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.features-page__nav-btn svg {
+  width: 15px;
+  height: 15px;
+}
+
+.features-page__btn--primary:hover:not(:disabled) {
+  background: var(--carrier-light-blue);
+  border-color: var(--carrier-light-blue);
+}
+
+.features-page__btn--secondary {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.features-page__btn--secondary:hover {
+  border-color: var(--color-text-muted);
+  color: var(--color-text);
+}
+
+.features-page__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 40px 0;
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
